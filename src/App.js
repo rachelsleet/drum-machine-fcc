@@ -110,6 +110,7 @@ class DrumPad extends React.Component {
     console.log(e);
     let keyPressed = e.key.toUpperCase();
     if (keyPressed === this.props.keyId) {
+      document.getElementById(keyPressed).load();
       document.getElementById(keyPressed).play();
     }
   }
